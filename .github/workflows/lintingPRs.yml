@@ -37,8 +37,8 @@ jobs:
         id: yarn-cache
         with:
           path: |
-            ${{ GITHUB_WORKSPACE }}/node_modules
-            ${{ GITHUB_WORKSPACE }}/.eslintcache
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/.eslintcache
             ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
