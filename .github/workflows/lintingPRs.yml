@@ -24,8 +24,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18.5.0
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
       
       # Install Yarn
       - name: Setup yarn
@@ -39,8 +37,8 @@ jobs:
         id: yarn-cache
         with:
           path: |
-            **/node_modules
-            **/.eslintcache
+            ${{ GITHUB_WORKSPACE }}/node_modules
+            ${{ GITHUB_WORKSPACE }}/.eslintcache
             ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
