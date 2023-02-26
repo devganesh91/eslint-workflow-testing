@@ -39,8 +39,8 @@ jobs:
         id: yarn-cache
         with:
           path: |
-            node_modules
-            .eslintcache
+            **/node_modules
+            **/.eslintcache
             ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
