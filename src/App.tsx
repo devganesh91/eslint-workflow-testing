@@ -3,6 +3,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
+// Random change to trigger eslint workflow
+
 function App() {
     const [count, setCount] = useState(0)
 
