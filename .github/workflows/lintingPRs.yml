@@ -2,9 +2,11 @@ name: Run ESLint on modified files
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on pull request events but only for the master branch
-  pull_request:
-      branches: [ main ]
+  # # Triggers the workflow on pull request events but only for the master branch
+  # pull_request:
+  #     branches: [ main ]
+  pull_request_review:
+    types: [submitted]
 
   # Allows you to run this workflow manually from the Actions tab
   # Ref - https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_dispatch
