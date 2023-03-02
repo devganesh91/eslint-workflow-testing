@@ -6,7 +6,7 @@ import './App.css';
 // Random change to trigger eslint workflow 7
 
 function App() {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(0)
 
     return (
         <div className='App'>
