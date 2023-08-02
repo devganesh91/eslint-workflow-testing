@@ -16,6 +16,11 @@ jobs:
             - name: Checkout to master
               uses: actions/checkout@master
 
+            - name: Setup Git config vars
+              run: |
+                  git config --global user.email "dev.pandian@tracxn.com"
+                  git config --global user.name "devganesh91"
+
             # https://github.com/marketplace/actions/npm-version
             - name: Increase Patch version
               uses: reedyuk/npm-version@1.2.1
