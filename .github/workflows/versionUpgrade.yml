@@ -1,0 +1,24 @@
+name: Upgrade Portal Apps version on Week Days
+
+on:
+    schedule:
+        # Week days only, morning 8:00 AM IST.
+        - cron: '30 4 * * 1-5'
+
+    # Allows you to run this workflow manually from the Actions tab
+    # Ref - https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_dispatch
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout to master
+              uses: actions/checkout@master
+
+            # https://github.com/marketplace/actions/npm-version
+            - name: Increase Patch version
+              uses: reedyuk/npm-version@1.2.1
+              with:
+                  version: 'patch'
+                  git-tag-version: 'true'
