@@ -1,7 +1,9 @@
-import React from 'react'
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React from 'react';
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import './App.css';
+
+// Random change to trigger eslint workflow 7
 
 function App() {
     const [count, setCount] = useState(0)
@@ -25,7 +27,7 @@ function App() {
             </div>
             <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
         </div>
-    )
+    );
 }
 
-export default App
+export default App;
