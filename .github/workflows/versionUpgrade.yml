@@ -9,6 +9,9 @@ on:
     # Ref - https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_dispatch
     workflow_dispatch:
 
+permissions:
+    contents: write
+
 jobs:
     build:
         runs-on: ubuntu-latest
