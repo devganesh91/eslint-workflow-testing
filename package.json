@@ -1,7 +1,7 @@
 {
   "name": "eslint-workflow-test",
   "private": true,
-  "version": "0.0.595",
+  "version": "0.0.596",
   "type": "module",
   "scripts": {
     "dev": "vite",
